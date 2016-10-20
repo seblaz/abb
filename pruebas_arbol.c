@@ -1,19 +1,11 @@
-/*
- * prueba_hash.c
- * Pruebas para el tipo de dato abstracto Tabla de Hash
- * Copyright: (2011) Margarita Manterola, Maximiliano Curia
- * Licencia: CC-BY-SA 2.5 (ar) ó CC-BY-SA 3.0
- */
+#include "abb.h"
+#include "testing.h"
 
-// #include "hash.h"
-// #include "testing.h"
-//
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// #include <unistd.h>  // For ssize_t in Linux.
-//
-//
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>  // For ssize_t in Linux.
+
 // /* ******************************************************************
 //  *                        PRUEBAS UNITARIAS
 //  * *****************************************************************/
@@ -404,23 +396,33 @@
 //
 // #include "nodo_hash.h"
 // #include "vector_dinamico.h"
-//
-// void pruebas_hash_alumno()
-// {
-//     /* Ejecuta todas las pruebas unitarias. */
-//     prueba_crear_hash_vacio();
-//     prueba_iterar_hash_vacio();
-//     prueba_hash_insertar();
-//     prueba_hash_reemplazar();
-//     prueba_hash_reemplazar_con_destruir();
-//     prueba_hash_borrar();
-//     prueba_hash_clave_vacia();
-//     prueba_hash_valor_null();
-//     prueba_hash_volumen(5000, true);
-//     prueba_hash_iterar();
-//     prueba_hash_iterar_volumen(5000);
-// }
-// void pruebas_volumen_alumno(size_t largo)
-// {
-//     prueba_hash_volumen(largo, false);
-// }
+void test()
+{
+  abb_t* arbol = abb_crear(strcmp, NULL);
+  int test = 5;
+  abb_guardar(arbol, "gato", &test);
+  print_test("Prueba arbol la clave1 pertenece", abb_pertenece(arbol, "gato"));
+
+}
+void pruebas_arbol()
+{
+  printf("%s\n", "***************** PRUEBAS ARBOL *****************");
+  test();
+  /* Ejecuta todas las pruebas unitarias. */
+  // prueba_crear_hash_vacio();
+  // prueba_iterar_hash_vacio();
+  // prueba_hash_insertar();
+  // prueba_hash_reemplazar();
+  // prueba_hash_reemplazar_con_destruir();
+  // prueba_hash_borrar();
+  // prueba_hash_clave_vacia();
+  // prueba_hash_valor_null();
+  // prueba_hash_volumen(5000, true);
+  // prueba_hash_iterar();
+  // prueba_hash_iterar_volumen(5000);
+}
+
+void pruebas_volumen_arbol(size_t largo)
+{
+    // prueba_hash_volumen(largo, false);
+}

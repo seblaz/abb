@@ -6,9 +6,9 @@
  *                        PROGRAMA PRINCIPAL
  * *****************************************************************/
 
-void pruebas_hash_alumno(void);
-void pruebas_volumen_alumno(size_t);
-void pruebas_test();
+void pruebas_arbol();
+void pruebas_volumen_arbol(size_t);
+void pruebas_nodo();
 
 // int main(int argc, char *argv[])
 // {
@@ -26,6 +26,7 @@ void pruebas_test();
 // }
 
 int main(int argc, char *argv[]){
-  pruebas_test();
+  pruebas_nodo();
+  pruebas_arbol();
   return 0;
 }

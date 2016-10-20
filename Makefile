@@ -1,6 +1,6 @@
 # abb
 CFLAGS = -g -O2 -std=c99 -Wall -Wconversion -Wno-sign-conversion -Wbad-function-cast -Wshadow -Wpointer-arith -Wunreachable-code -Wformat=2 -Werror
-OBJ = o/abb.o o/nodo_ab.o o/main.o o/pruebas_alumno.o o/pruebas_test.o o/testing.o
+OBJ = o/abb.o o/nodo_ab.o o/main.o o/pruebas_arbol.o o/pruebas_nodo.o o/testing.o
 EXEC = abb
 CC = gcc
 
@@ -12,11 +12,11 @@ o/abb.o:abb.c abb.h
 o/nodo_ab.o:nodo_ab.c nodo_ab.h
 	$(CC) $(CFLAGS) -c -o o/nodo_ab.o nodo_ab.c
 
-o/pruebas_alumno.o:pruebas_alumno.c
-	$(CC) $(CFLAGS) -c -o o/pruebas_alumno.o pruebas_alumno.c
+o/pruebas_arbol.o:pruebas_arbol.c
+	$(CC) $(CFLAGS) -c -o o/pruebas_arbol.o pruebas_arbol.c
 
-o/pruebas_test.o:pruebas_test.c
-	$(CC) $(CFLAGS) -c -o o/pruebas_test.o pruebas_test.c
+o/pruebas_nodo.o:pruebas_nodo.c
+	$(CC) $(CFLAGS) -c -o o/pruebas_nodo.o pruebas_nodo.c
 
 o/testing.o:testing.c testing.h
 	$(CC) $(CFLAGS) -c -o o/testing.o testing.c

@@ -114,7 +114,7 @@ static void prueba_nodo_borrar()
   print_test("Prueba nodo borrrar nodo3 es valor3", nodo_ab_borrar(nodo3) == valor3);
 }
 
-void pruebas_test(){
+void pruebas_nodo(){
   printf("%s\n", "***************** PRUEBAS NODO *****************");
   prueba_crear_nodo_vacio();
   prueba_nodo_cambiar_claves();
