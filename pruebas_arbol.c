@@ -200,69 +200,68 @@
 //
 //     hash_destruir(hash);
 // }
-//
-// static void prueba_hash_volumen(size_t largo, bool debug)
-// {
-//     hash_t* hash = hash_crear(NULL);
-//
-//     const size_t largo_clave = 10;
-//     char (*claves)[largo_clave] = malloc(largo * largo_clave);
-//
-//     unsigned* valores[largo];
-//
-//     /* Inserta 'largo' parejas en el hash */
-//     bool ok = true;
-//     for (unsigned i = 0; i < largo; i++) {
-//         // printf("%d\n", i);
-//         valores[i] = malloc(sizeof(int));
-//         sprintf(claves[i], "%08d", i);
-//         *valores[i] = i;
-//         ok = hash_guardar(hash, claves[i], valores[i]);
-//         // printf("guarde el %d\n", i);
-//         if (!ok) break;
-//     }
-//
-//     if (debug) print_test("Prueba hash almacenar muchos elementos", ok);
-//     if (debug) print_test("Prueba hash la cantidad de elementos es correcta", hash_cantidad(hash) == largo);
-//
-//     /* Verifica que devuelva los valores correctos */
-//     for (size_t i = 0; i < largo; i++) {
-//         ok = hash_pertenece(hash, claves[i]);
-//         if (!ok) break;
-//         ok = hash_obtener(hash, claves[i]) == valores[i];
-//         if (!ok) break;
-//     }
-//
-//     if (debug) print_test("Prueba hash pertenece y obtener muchos elementos", ok);
-//     if (debug) print_test("Prueba hash la cantidad de elementos es correcta", hash_cantidad(hash) == largo);
-//
-//     /* Verifica que borre y devuelva los valores correctos */
-//     for (size_t i = 0; i < largo; i++) {
-//         ok = hash_borrar(hash, claves[i]) == valores[i];
-//         if (!ok) break;
-//     }
-//
-//     if (debug) print_test("Prueba hash borrar muchos elementos", ok);
-//     if (debug) print_test("Prueba hash la cantidad de elementos es 0", hash_cantidad(hash) == 0);
-//
-//     /* Destruye el hash y crea uno nuevo que sí libera */
-//     hash_destruir(hash);
-//     hash = hash_crear(free);
-//
-//     /* Inserta 'largo' parejas en el hash */
-//     ok = true;
-//     for (size_t i = 0; i < largo; i++) {
-//         ok = hash_guardar(hash, claves[i], valores[i]);
-//         if (!ok) break;
-//     }
-//
-//     free(claves);
-//
-//     /* Destruye el hash - debería liberar los enteros */
-//     hash_destruir(hash);
-//
-// }
-//
+
+static void prueba_abb_volumen(size_t largo, bool debug)
+{
+    abb_t* arbol = abb_crear(strcmp, NULL);
+
+    const size_t largo_clave = 10;
+    char (*claves)[largo_clave] = malloc(largo * largo_clave);
+
+    unsigned* valores[largo];
+
+    /* Inserta 'largo' parejas en el hash */
+    bool ok = true;
+    for (unsigned i = 0; i < largo; i++) {
+        valores[i] = malloc(sizeof(int));
+        *valores[i] = i;
+        sprintf(claves[i], "%08d", (int)(rand()%(largo*largo)));
+        ok = abb_guardar(arbol, claves[i], valores[i]);
+        if (!ok) break;
+    }
+
+    if (debug) print_test("Prueba arbol almacenar muchos elementos", ok);
+    printf("%lu\n", abb_cantidad(arbol));
+    // if (debug) print_test("Prueba arbol la cantidad de elementos es correcta", abb_cantidad(arbol) == largo);
+
+    /* Verifica que devuelva los valores correctos */
+    for (size_t i = 0; i < largo; i++) {
+        ok = abb_pertenece(arbol, claves[i]);
+        if (!ok) break;
+        // ok = abb_obtener(arbol, claves[i]) == valores[i];
+        // if (!ok) break;
+    }
+
+    if (debug) print_test("Prueba abb_pertenece pertenece y obtener muchos elementos", ok);
+    // if (debug) print_test("Prueba arbol la cantidad de elementos es correcta", abb_cantidad(arbol) == largo);
+
+    /* Verifica que borre y devuelva los valores correctos */
+    // for (size_t i = 0; i < largo; i++) {
+    //     ok = hash_borrar(hash, claves[i]) == valores[i];
+    //     if (!ok) break;
+    // }
+    //
+    // if (debug) print_test("Prueba hash borrar muchos elementos", ok);
+    // if (debug) print_test("Prueba hash la cantidad de elementos es 0", hash_cantidad(hash) == 0);
+    //
+    // /* Destruye el hash y crea uno nuevo que sí libera */
+    // hash_destruir(hash);
+    // hash = hash_crear(free);
+    //
+    // /* Inserta 'largo' parejas en el hash */
+    // ok = true;
+    // for (size_t i = 0; i < largo; i++) {
+    //     ok = hash_guardar(hash, claves[i], valores[i]);
+    //     if (!ok) break;
+    // }
+    //
+    // free(claves);
+    //
+    // /* Destruye el hash - debería liberar los enteros */
+    // hash_destruir(hash);
+
+}
+
 // static ssize_t buscar(const char* clave, char* claves[], size_t largo)
 // {
 //     for (size_t i = 0; i < largo; i++) {
@@ -396,18 +395,32 @@
 //
 // #include "nodo_hash.h"
 // #include "vector_dinamico.h"
+
 void test()
 {
   abb_t* arbol = abb_crear(strcmp, NULL);
-  int test = 5;
-  abb_guardar(arbol, "gato", &test);
-  print_test("Prueba arbol la clave1 pertenece", abb_pertenece(arbol, "gato"));
+
+  char *clave1 = "perro", *valor1 = "guau";
+  char *clave2 = "gato", *valor2 = "miau";
+  char *clave3 = "vaca", *valor3 = "mu";
+
+  print_test("Prueba arbol la clave no pertenece", !abb_pertenece(arbol, "lala"));
+
+  abb_guardar(arbol, clave1, valor1);
+  print_test("Prueba arbol la clave1 pertenece", abb_pertenece(arbol, clave1));
+  abb_guardar(arbol, clave2, valor2);
+  print_test("Prueba arbol la clave2 pertenece", abb_pertenece(arbol, clave2));
+  abb_guardar(arbol, clave3, valor3);
+  abb_borrar(arbol, clave1);
+  print_test("Prueba arbol la clave3 pertenece", abb_pertenece(arbol, clave3));
 
 }
+
 void pruebas_arbol()
 {
   printf("%s\n", "***************** PRUEBAS ARBOL *****************");
   test();
+  prueba_abb_volumen(5000, true);
   /* Ejecuta todas las pruebas unitarias. */
   // prueba_crear_hash_vacio();
   // prueba_iterar_hash_vacio();

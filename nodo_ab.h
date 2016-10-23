@@ -7,6 +7,10 @@
 
 struct nodo_ab;
 typedef struct nodo_ab nodo_ab_t;
+typedef enum{
+    izq = 0,
+    der = 1,
+} pos_nodo;
 
 // Crea el nodo con la clave y el dato correspondiente.
 // En caso de no poder crearlo devuelve NULL.
@@ -39,13 +43,18 @@ bool nodo_ab_cambiar_clave(nodo_ab_t * nodo, const char *clave);
 
 // Apunta el nodo izquierdo de nodo1 a nodo2.
 // Pre: nodo1 y nodo2 fueron creados.
-// Post: se apunto el nodo izquierdo de nodo1 a nodo2.
+// Post: el nodo izquierdo de nodo1 es nodo2.
 void nodo_ab_apuntar_izq(nodo_ab_t * nodo1, nodo_ab_t * nodo2);
 
 // Apunta el nodo derecho de nodo1 a nodo2.
 // Pre: nodo1 y nodo2 fueron creados.
-// Post: se apunto el nodo derecho de nodo1 a nodo2.
+// Post: el nodo derecho de nodo1 es nodo2.
 void nodo_ab_apuntar_der(nodo_ab_t * nodo1, nodo_ab_t * nodo2);
+
+// Apunta el nodo pos de nodo1 a nodo2.
+// Pre: nodo1 y nodo2 fueron creados.
+// Post: el nodo pos de nodo1 es nodo2.
+void nodo_ab_apuntar(nodo_ab_t * nodo1, nodo_ab_t * nodo2, pos_nodo pos);
 
 // Devuelve el nodo izquierdo de nodo.
 // Pre: el nodo fue creado.
@@ -56,6 +65,23 @@ nodo_ab_t* nodo_ab_obtener_izq(nodo_ab_t * nodo);
 // Pre: el nodo fue creado.
 // Post: se devolvio el nodo derecho de nodo.
 nodo_ab_t* nodo_ab_obtener_der(nodo_ab_t * nodo);
+
+// Devuelve el nodo pasado por parametro en pos.
+// Pre: el nodo fue creado.
+// Post: se devolvio el nodo pos de nodo.
+nodo_ab_t* nodo_ab_obtener(nodo_ab_t * nodo, pos_nodo pos);
+
+// Devuelve verdadero si el nodo es una hoja y falso en caso contrario.
+// Pre: el nodo fue creado.
+// Post: se devolvio verdadero o falso dependiendo si el nodo es una hoja.
+bool nodo_ab_es_hoja(nodo_ab_t * nodo);
+
+// Devuelve verdadero si el nodo tiene un solo hijo y falso en caso contrario.
+// Escribe en pos si el nodo se encuentra a la derecha o a la izquierda.
+// Pre: el nodo fue creado.
+// Post: se devolvio verdadero o falso dependiendo si el nodo tiene un solo hijo.
+// Se escribio en pos la posicion del hijo.
+bool nodo_ab_tiene_un_hijo(nodo_ab_t * nodo, pos_nodo* pos);
 
 // Borra el nodo y devuele el dato almacenado en el mismo.
 // Pre: el nodo fue creado.

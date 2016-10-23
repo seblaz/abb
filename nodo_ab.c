@@ -60,12 +60,40 @@ void nodo_ab_apuntar_der(nodo_ab_t * nodo1, nodo_ab_t * nodo2){
   nodo1->der = nodo2;
 }
 
+void nodo_ab_apuntar(nodo_ab_t * nodo1, nodo_ab_t * nodo2, pos_nodo pos){
+  if(pos == izq){
+    nodo_ab_apuntar_izq(nodo1, nodo2);
+  }else{
+    nodo_ab_apuntar_der(nodo1, nodo2);
+  }
+}
+
 nodo_ab_t* nodo_ab_obtener_izq(nodo_ab_t * nodo){
   return nodo->izq;
 }
 
 nodo_ab_t* nodo_ab_obtener_der(nodo_ab_t * nodo){
   return nodo->der;
+}
+
+nodo_ab_t* nodo_ab_obtener(nodo_ab_t * nodo, pos_nodo pos){
+  if(pos == izq)
+    return nodo_ab_obtener_izq(nodo);
+  return nodo_ab_obtener_der(nodo);
+}
+
+bool nodo_ab_es_hoja(nodo_ab_t * nodo){
+  return !nodo->izq && !nodo->der;
+}
+
+bool nodo_ab_tiene_un_hijo(nodo_ab_t * nodo, pos_nodo* pos){
+  if(nodo->izq)
+    *pos = izq;
+
+  if(nodo->der)
+    *pos = der;
+
+  return !(nodo->izq && nodo->der) && !nodo_ab_es_hoja(nodo);
 }
 
 void* nodo_ab_borrar(nodo_ab_t * nodo){
