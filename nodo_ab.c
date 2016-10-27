@@ -82,6 +82,14 @@ nodo_ab_t* nodo_ab_obtener(nodo_ab_t * nodo, pos_nodo pos){
   return nodo_ab_obtener_der(nodo);
 }
 
+nodo_ab_t** nodo_ab_obtener_puntero_izq(nodo_ab_t * nodo){
+  return &nodo->izq;
+}
+
+nodo_ab_t** nodo_ab_obtener_puntero_der(nodo_ab_t * nodo){
+  return &nodo->der;
+}
+
 bool nodo_ab_es_hoja(nodo_ab_t * nodo){
   return !nodo->izq && !nodo->der;
 }
@@ -108,4 +116,30 @@ void nodo_ab_destruir(nodo_ab_t * nodo, abb_destruir_dato_t destruir_dato){
     destruir_dato(nodo->valor);
   free(nodo->clave);
   free(nodo);
+}
+
+void nodo_var_dump(nodo_ab_t* nodo, int cant_tabs){
+  if(!nodo)
+    return;
+
+  for (int i = 0; i < cant_tabs; i++)
+    printf("\t");
+
+  printf("|clave: [%s]|\n", nodo_ab_obtener_clave(nodo));
+
+  for (int i = 0; i < cant_tabs; i++)
+    printf("\t");
+
+  printf("|valor: [%d]|\n", *(int*)nodo_ab_obtener_valor(nodo));
+
+  cant_tabs++;
+  for (int i = 0; i < cant_tabs; i++)
+    printf("\t");
+  printf("%s\n", "nodo izquierdo:");
+  nodo_var_dump(nodo_ab_obtener_izq(nodo), cant_tabs);
+
+  for (int i = 0; i < cant_tabs; i++)
+    printf("\t");
+  printf("%s\n", "nodo derecho:");
+  nodo_var_dump(nodo_ab_obtener_der(nodo), cant_tabs);
 }

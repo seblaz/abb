@@ -35,13 +35,32 @@ bool abb_guardar(abb_t *arbol, const char *clave, void *dato);
 // menos.
 void *abb_borrar(abb_t *arbol, const char *clave);
 
+// Obtiene el dato almacenado bajo clave. En caso que no exista devuelve NULL.
+// Pre: el arbol fue creado.
+// Post: se devolvio el dato guardado bajo clave.
 void *abb_obtener(const abb_t *arbol, const char *clave);
 
+// Devuelve verdadero si la clave esta guardada en el arbol, falso en caso contrario.
+// Pre: el arbol fue creado.
+// Post: se devolvio verdadero si la clave esta guardada en el arbol, falso en caso
+// contrario.
 bool abb_pertenece(const abb_t *arbol, const char *clave);
 
+// Devuelve la cantidad de elementos en el arbol.
+// Pre: el arbol fue creado.
+// Post: se devolvio la cantidad de elementos guardados en arbol.
 size_t abb_cantidad(abb_t *arbol);
 
+// Destruye el arbol y elimina los datos con la funcion destruir_dato pasada en
+// abb_crear.
+// Pre: el arbol fue creado.
+// Post: el arbol fue destruido.
 void abb_destruir(abb_t *arbol);
+
+// Inspirada en var_dump. Imprime una representacion del arbol.
+// Pre: el arbol fue creado.
+// Post: se imprimio una representacion del arbol.
+void abb_var_dump(abb_t* arbol);
 
 /*************************************************************************
                             Iterador Interno

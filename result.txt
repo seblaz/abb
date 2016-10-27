@@ -1,0 +1,547 @@
+./abb
+***************** PRUEBAS NODO *****************
+Prueba nodo crear nodo vacio... OK
+Prueba nodo el dato es NULL... OK
+Prueba nodo la clave no es NULL... OK
+Prueba nodo la clave esta vacia... OK
+Prueba nodo el dato1 no es NULL... OK
+Prueba nodo el dato2 no es NULL... OK
+Prueba nodo la clave1 no es NULL... OK
+Prueba nodo la clave2 no es NULL... OK
+Prueba nodo el dato de nodo1 es valor1a... OK
+Prueba nodo el dato de nodo2 es valor2a... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo cambiar clave1... OK
+Prueba nodo cambiar clave2... OK
+Prueba nodo cambiar valor clave1... OK
+Prueba nodo cambiar valor clave2... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo el dato de nodo1 es valor1a... OK
+Prueba nodo el dato de nodo2 es valor2a... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo el dato de nodo1 es valor1b... OK
+Prueba nodo el dato de nodo2 es valor2b... OK
+Prueba nodo obtener nodo izquierdo de nodo1 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo1 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo2 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo2 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo3 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo3 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo1 es nodo2... OK
+Prueba nodo obtener nodo derecho de nodo1 es nodo3... OK
+Prueba nodo borrrar nodo1 es valor1... OK
+Prueba nodo borrrar nodo2 es valor2... OK
+Prueba nodo borrrar nodo3 es valor3... OK
+***************** PRUEBAS ARBOL *****************
+Prueba arbol crear arbol vacio... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol obtener clave A, es NULL, no existe... OK
+Prueba arbol pertenece clave A, es false, no existe... OK
+Prueba arbol borrar clave A, es NULL, no existe... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave1 es valor1... OK
+Prueba arbol obtener clave1 es valor1... OK
+Prueba arbol pertenece clave1, es true... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol pertenece clave2, es true... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol pertenece clave3, es true... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1 con otro valor... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol insertar clave2 con otro valor... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1 con otro valor... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol insertar clave2 con otro valor... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol pertenece clave3, es verdadero... OK
+Prueba arbol borrar clave3, es valor3... OK
+Prueba arbol borrar clave3, es NULL... OK
+Prueba arbol pertenece clave3, es falso... OK
+Prueba arbol obtener clave3, es NULL... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol pertenece clave1, es verdadero... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol borrar clave1, es NULL... OK
+Prueba arbol pertenece clave1, es falso... OK
+Prueba arbol obtener clave1, es NULL... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol pertenece clave2, es verdadero... OK
+Prueba arbol borrar clave2, es valor2... OK
+Prueba arbol borrar clave2, es NULL... OK
+Prueba arbol pertenece clave2, es falso... OK
+Prueba arbol obtener clave2, es NULL... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol pertenece clave1, es verdadero... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol borrar clave1, es NULL... OK
+Prueba arbol pertenece clave1, es falso... OK
+Prueba arbol obtener clave1, es NULL... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol insertar clave vacia... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave vacia es valor... OK
+Prueba arbol pertenece clave vacia, es true... OK
+Prueba arbol borrar clave vacia, es valor... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave vacia valor NULL... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave vacia es valor NULL... OK
+Prueba arbol pertenece clave vacia, es true... OK
+Prueba arbol borrar clave vacia, es valor NULL... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol almacenar muchos elementos... OK
+Prueba arbol la cantidad de elementos es correcta... OK
+cantidad de elementos en el arbol: 9
+Prueba abb_pertenece pertenece y obtener muchos elementos... OK
+Prueba arbol la cantidad de elementos es correcta... OK
+Makefile:36: fallo en las instrucciones para el objetivo 'run'
+make: *** [run] Violación de segmento (core dumped) [Núcleo vaciado a un archivo]
+***************** PRUEBAS NODO *****************
+Prueba nodo crear nodo vacio... OK
+Prueba nodo el dato es NULL... OK
+Prueba nodo la clave no es NULL... OK
+Prueba nodo la clave esta vacia... OK
+Prueba nodo el dato1 no es NULL... OK
+Prueba nodo el dato2 no es NULL... OK
+Prueba nodo la clave1 no es NULL... OK
+Prueba nodo la clave2 no es NULL... OK
+Prueba nodo el dato de nodo1 es valor1a... OK
+Prueba nodo el dato de nodo2 es valor2a... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo cambiar clave1... OK
+Prueba nodo cambiar clave2... OK
+Prueba nodo cambiar valor clave1... OK
+Prueba nodo cambiar valor clave2... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo el dato de nodo1 es valor1a... OK
+Prueba nodo el dato de nodo2 es valor2a... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo el dato de nodo1 es valor1b... OK
+Prueba nodo el dato de nodo2 es valor2b... OK
+Prueba nodo obtener nodo izquierdo de nodo1 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo1 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo2 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo2 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo3 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo3 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo1 es nodo2... OK
+Prueba nodo obtener nodo derecho de nodo1 es nodo3... OK
+Prueba nodo borrrar nodo1 es valor1... OK
+Prueba nodo borrrar nodo2 es valor2... OK
+Prueba nodo borrrar nodo3 es valor3... OK
+***************** PRUEBAS ARBOL *****************
+Prueba arbol crear arbol vacio... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol obtener clave A, es NULL, no existe... OK
+Prueba arbol pertenece clave A, es false, no existe... OK
+Prueba arbol borrar clave A, es NULL, no existe... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave1 es valor1... OK
+Prueba arbol obtener clave1 es valor1... OK
+Prueba arbol pertenece clave1, es true... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol pertenece clave2, es true... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol pertenece clave3, es true... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1 con otro valor... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol insertar clave2 con otro valor... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1 con otro valor... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol insertar clave2 con otro valor... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol pertenece clave3, es verdadero... OK
+Prueba arbol borrar clave3, es valor3... OK
+Prueba arbol borrar clave3, es NULL... OK
+Prueba arbol pertenece clave3, es falso... OK
+Prueba arbol obtener clave3, es NULL... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol pertenece clave1, es verdadero... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol borrar clave1, es NULL... OK
+Prueba arbol pertenece clave1, es falso... OK
+Prueba arbol obtener clave1, es NULL... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol pertenece clave2, es verdadero... OK
+Prueba arbol borrar clave2, es valor2... OK
+Prueba arbol borrar clave2, es NULL... OK
+Prueba arbol pertenece clave2, es falso... OK
+Prueba arbol obtener clave2, es NULL... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol pertenece clave1, es verdadero... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol borrar clave1, es NULL... OK
+Prueba arbol pertenece clave1, es falso... OK
+Prueba arbol obtener clave1, es NULL... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol insertar clave vacia... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave vacia es valor... OK
+Prueba arbol pertenece clave vacia, es true... OK
+Prueba arbol borrar clave vacia, es valor... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave vacia valor NULL... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave vacia es valor NULL... OK
+Prueba arbol pertenece clave vacia, es true... OK
+Prueba arbol borrar clave vacia, es valor NULL... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol almacenar muchos elementos... OK
+Prueba arbol la cantidad de elementos es correcta... OK
+cantidad de elementos en el arbol: 9
+Prueba abb_pertenece pertenece y obtener muchos elementos... OK
+Prueba arbol la cantidad de elementos es correcta... OK
+***************** PRUEBAS NODO *****************
+Prueba nodo crear nodo vacio... OK
+Prueba nodo el dato es NULL... OK
+Prueba nodo la clave no es NULL... OK
+Prueba nodo la clave esta vacia... OK
+Prueba nodo el dato1 no es NULL... OK
+Prueba nodo el dato2 no es NULL... OK
+Prueba nodo la clave1 no es NULL... OK
+Prueba nodo la clave2 no es NULL... OK
+Prueba nodo el dato de nodo1 es valor1a... OK
+Prueba nodo el dato de nodo2 es valor2a... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo cambiar clave1... OK
+Prueba nodo cambiar clave2... OK
+Prueba nodo cambiar valor clave1... OK
+Prueba nodo cambiar valor clave2... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo el dato de nodo1 es valor1a... OK
+Prueba nodo el dato de nodo2 es valor2a... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo el dato de nodo1 es valor1b... OK
+Prueba nodo el dato de nodo2 es valor2b... OK
+Prueba nodo obtener nodo izquierdo de nodo1 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo1 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo2 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo2 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo3 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo3 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo1 es nodo2... OK
+Prueba nodo obtener nodo derecho de nodo1 es nodo3... OK
+Prueba nodo borrrar nodo1 es valor1... OK
+Prueba nodo borrrar nodo2 es valor2... OK
+Prueba nodo borrrar nodo3 es valor3... OK
+***************** PRUEBAS ARBOL *****************
+Prueba arbol crear arbol vacio... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol obtener clave A, es NULL, no existe... OK
+Prueba arbol pertenece clave A, es false, no existe... OK
+Prueba arbol borrar clave A, es NULL, no existe... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave1 es valor1... OK
+Prueba arbol obtener clave1 es valor1... OK
+Prueba arbol pertenece clave1, es true... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol pertenece clave2, es true... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol pertenece clave3, es true... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1 con otro valor... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol insertar clave2 con otro valor... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1 con otro valor... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol insertar clave2 con otro valor... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol pertenece clave3, es verdadero... OK
+Prueba arbol borrar clave3, es valor3... OK
+Prueba arbol borrar clave3, es NULL... OK
+Prueba arbol pertenece clave3, es falso... OK
+Prueba arbol obtener clave3, es NULL... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol pertenece clave1, es verdadero... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol borrar clave1, es NULL... OK
+Prueba arbol pertenece clave1, es falso... OK
+Prueba arbol obtener clave1, es NULL... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol pertenece clave2, es verdadero... OK
+Prueba arbol borrar clave2, es valor2... OK
+Prueba arbol borrar clave2, es NULL... OK
+Prueba arbol pertenece clave2, es falso... OK
+Prueba arbol obtener clave2, es NULL... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol pertenece clave1, es verdadero... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol borrar clave1, es NULL... OK
+Prueba arbol pertenece clave1, es falso... OK
+Prueba arbol obtener clave1, es NULL... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol insertar clave vacia... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave vacia es valor... OK
+Prueba arbol pertenece clave vacia, es true... OK
+Prueba arbol borrar clave vacia, es valor... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave vacia valor NULL... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave vacia es valor NULL... OK
+Prueba arbol pertenece clave vacia, es true... OK
+Prueba arbol borrar clave vacia, es valor NULL... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol almacenar muchos elementos... OK
+Prueba arbol la cantidad de elementos es correcta... OK
+cantidad de elementos en el arbol: 9
+Prueba abb_pertenece pertenece y obtener muchos elementos... OK
+Prueba arbol la cantidad de elementos es correcta... OK
+***************** PRUEBAS NODO *****************
+Prueba nodo crear nodo vacio... OK
+Prueba nodo el dato es NULL... OK
+Prueba nodo la clave no es NULL... OK
+Prueba nodo la clave esta vacia... OK
+Prueba nodo el dato1 no es NULL... OK
+Prueba nodo el dato2 no es NULL... OK
+Prueba nodo la clave1 no es NULL... OK
+Prueba nodo la clave2 no es NULL... OK
+Prueba nodo el dato de nodo1 es valor1a... OK
+Prueba nodo el dato de nodo2 es valor2a... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo cambiar clave1... OK
+Prueba nodo cambiar clave2... OK
+Prueba nodo cambiar valor clave1... OK
+Prueba nodo cambiar valor clave2... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo el dato de nodo1 es valor1a... OK
+Prueba nodo el dato de nodo2 es valor2a... OK
+Prueba nodo la clave de nodo1 es clave1... OK
+Prueba nodo la clave de nodo2 es clave2... OK
+Prueba nodo el dato de nodo1 es valor1b... OK
+Prueba nodo el dato de nodo2 es valor2b... OK
+Prueba nodo obtener nodo izquierdo de nodo1 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo1 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo2 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo2 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo3 es NULL... OK
+Prueba nodo obtener nodo derecho de nodo3 es NULL... OK
+Prueba nodo obtener nodo izquierdo de nodo1 es nodo2... OK
+Prueba nodo obtener nodo derecho de nodo1 es nodo3... OK
+Prueba nodo borrrar nodo1 es valor1... OK
+Prueba nodo borrrar nodo2 es valor2... OK
+Prueba nodo borrrar nodo3 es valor3... OK
+***************** PRUEBAS ARBOL *****************
+Prueba arbol crear arbol vacio... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol obtener clave A, es NULL, no existe... OK
+Prueba arbol pertenece clave A, es false, no existe... OK
+Prueba arbol borrar clave A, es NULL, no existe... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave1 es valor1... OK
+Prueba arbol obtener clave1 es valor1... OK
+Prueba arbol pertenece clave1, es true... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol pertenece clave2, es true... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol pertenece clave3, es true... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1 con otro valor... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol insertar clave2 con otro valor... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol obtener clave1 es valor1a... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol obtener clave2 es valor2a... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1 con otro valor... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol obtener clave1 es valor1b... OK
+Prueba arbol insertar clave2 con otro valor... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol obtener clave2 es valor2b... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol pertenece clave3, es verdadero... OK
+Prueba arbol borrar clave3, es valor3... OK
+Prueba arbol borrar clave3, es NULL... OK
+Prueba arbol pertenece clave3, es falso... OK
+Prueba arbol obtener clave3, es NULL... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol pertenece clave1, es verdadero... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol borrar clave1, es NULL... OK
+Prueba arbol pertenece clave1, es falso... OK
+Prueba arbol obtener clave1, es NULL... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol pertenece clave2, es verdadero... OK
+Prueba arbol borrar clave2, es valor2... OK
+Prueba arbol borrar clave2, es NULL... OK
+Prueba arbol pertenece clave2, es falso... OK
+Prueba arbol obtener clave2, es NULL... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave1... OK
+Prueba arbol insertar clave2... OK
+Prueba arbol insertar clave3... OK
+Prueba arbol pertenece clave1, es verdadero... OK
+Prueba arbol borrar clave1, es valor1... OK
+Prueba arbol borrar clave1, es NULL... OK
+Prueba arbol pertenece clave1, es falso... OK
+Prueba arbol obtener clave1, es NULL... OK
+Prueba arbol la cantidad de elementos es 2... OK
+Prueba arbol obtener clave2 es valor2... OK
+Prueba arbol obtener clave3 es valor3... OK
+Prueba arbol insertar clave vacia... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave vacia es valor... OK
+Prueba arbol pertenece clave vacia, es true... OK
+Prueba arbol borrar clave vacia, es valor... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol insertar clave vacia valor NULL... OK
+Prueba arbol la cantidad de elementos es 1... OK
+Prueba arbol obtener clave vacia es valor NULL... OK
+Prueba arbol pertenece clave vacia, es true... OK
+Prueba arbol borrar clave vacia, es valor NULL... OK
+Prueba arbol la cantidad de elementos es 0... OK
+Prueba arbol almacenar muchos elementos... OK
+Prueba arbol la cantidad de elementos es correcta... OK
+cantidad de elementos en el arbol: 9
+Prueba abb_pertenece pertenece y obtener muchos elementos... OK
+Prueba arbol la cantidad de elementos es correcta... OK

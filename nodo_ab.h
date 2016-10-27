@@ -71,6 +71,16 @@ nodo_ab_t* nodo_ab_obtener_der(nodo_ab_t * nodo);
 // Post: se devolvio el nodo pos de nodo.
 nodo_ab_t* nodo_ab_obtener(nodo_ab_t * nodo, pos_nodo pos);
 
+// Devuelve un puntero al nodo izquierdo de nodo.
+// Pre: el nodo fue creado.
+// Post: se devolvio un puntero al nodo izquierdo de nodo.
+nodo_ab_t** nodo_ab_obtener_puntero_izq(nodo_ab_t * nodo);
+
+// Devuelve un puntero al nodo derecho de nodo.
+// Pre: el nodo fue creado.
+// Post: se devolvio un puntero al nodo derecho de nodo.
+nodo_ab_t** nodo_ab_obtener_puntero_der(nodo_ab_t * nodo);
+
 // Devuelve verdadero si el nodo es una hoja y falso en caso contrario.
 // Pre: el nodo fue creado.
 // Post: se devolvio verdadero o falso dependiendo si el nodo es una hoja.
@@ -93,5 +103,7 @@ void* nodo_ab_borrar(nodo_ab_t * nodo);
 // Pre: el nodo fue creado.
 // Post: se destruyo el nodo.
 void nodo_ab_destruir(nodo_ab_t * nodo, abb_destruir_dato_t destruir_dato);
+
+void nodo_var_dump(nodo_ab_t* nodo, int cant_tabs);
 
 #endif
