@@ -10,7 +10,7 @@
  *                        PRUEBAS UNITARIAS
  * *****************************************************************/
 
-static void prueba_crear_arbol_vacio()
+void prueba_crear_arbol_vacio()
 {
     abb_t* arbol = abb_crear(strcmp, NULL);
 
@@ -23,20 +23,21 @@ static void prueba_crear_arbol_vacio()
     abb_destruir(arbol);
 }
 
-// static void prueba_iterar_hash_vacio()
-// {
-//     hash_t* hash = hash_crear(NULL);
-//     hash_iter_t* iter = hash_iter_crear(hash);
-//     print_test("Prueba hash iter crear iterador hash vacio", iter);
-//     print_test("Prueba hash iter esta al final", hash_iter_al_final(iter));
-//     print_test("Prueba hash iter avanzar es false", !hash_iter_avanzar(iter));
-//     print_test("Prueba hash iter ver actual es NULL", !hash_iter_ver_actual(iter));
-//
-//     hash_iter_destruir(iter);
-//     hash_destruir(hash);
-// }
+void prueba_iterar_abb_vacio()
+{
+    abb_t* arbol = abb_crear(strcmp, NULL);
+    abb_iter_t* iter = abb_iter_in_crear(arbol);
 
-static void prueba_arbol_insertar()
+    print_test("Prueba abb iter crear iterador abb vacio", iter);
+    print_test("Prueba abb iter esta al final", abb_iter_in_al_final(iter));
+    print_test("Prueba abb iter avanzar es false", !abb_iter_in_avanzar(iter));
+    print_test("Prueba abb iter ver actual es NULL", !abb_iter_in_ver_actual(iter));
+
+    abb_iter_in_destruir(iter);
+    abb_destruir(arbol);
+}
+
+void prueba_arbol_insertar()
 {
     abb_t* arbol = abb_crear(strcmp, NULL);
 
@@ -69,7 +70,7 @@ static void prueba_arbol_insertar()
     abb_destruir(arbol);
 }
 
-static void prueba_arbol_reemplazar()
+void prueba_arbol_reemplazar()
 {
     abb_t* arbol = abb_crear(strcmp, NULL);
 
@@ -96,7 +97,7 @@ static void prueba_arbol_reemplazar()
     abb_destruir(arbol);
 }
 
-static void prueba_arbol_reemplazar_con_destruir()
+void prueba_arbol_reemplazar_con_destruir()
 {
     abb_t* arbol = abb_crear(strcmp, free);
 
@@ -130,7 +131,7 @@ static void prueba_arbol_reemplazar_con_destruir()
     abb_destruir(arbol);
 }
 
-static void prueba_arbol_borrar()
+void prueba_arbol_borrar()
 {
     abb_t* arbol = abb_crear(strcmp, NULL);
 
@@ -167,7 +168,7 @@ static void prueba_arbol_borrar()
 
     abb_destruir(arbol);
 }
-static void prueba_arbol_borrar_raiz(){
+void prueba_arbol_borrar_raiz(){
   abb_t* arbol = abb_crear(strcmp, NULL);
 
   char *clave1 = "perro", *valor1 = "guau";
@@ -192,7 +193,7 @@ static void prueba_arbol_borrar_raiz(){
   abb_destruir(arbol);
 }
 
-static void prueba_arbol_clave_vacia()
+void prueba_arbol_clave_vacia()
 {
     abb_t* arbol = abb_crear(strcmp, NULL);
 
@@ -208,7 +209,7 @@ static void prueba_arbol_clave_vacia()
     abb_destruir(arbol);
 }
 
-static void prueba_arbol_valor_null()
+void prueba_arbol_valor_null()
 {
     abb_t* arbol = abb_crear(strcmp, NULL);
 
@@ -225,7 +226,7 @@ static void prueba_arbol_valor_null()
     abb_destruir(arbol);
 }
 
-static void prueba_arbol_volumen(size_t largo, bool debug)
+void prueba_arbol_volumen(size_t largo, bool debug)
 {
     abb_t* arbol = abb_crear(strcmp, NULL);
 
@@ -289,136 +290,137 @@ static void prueba_arbol_volumen(size_t largo, bool debug)
     free(claves);
 }
 
-// static ssize_t buscar(const char* clave, char* claves[], size_t largo)
-// {
-//     for (size_t i = 0; i < largo; i++) {
-//         if (strcmp(clave, claves[i]) == 0) return (ssize_t) i;
-//     }
-//     return -1;
-// }
-//
-// static void prueba_hash_iterar()
-// {
-//     hash_t* hash = hash_crear(NULL);
-//
-//     char *claves[] = {"perro", "gato", "vaca"};
-//     char *valores[] = {"guau", "miau", "mu"};
-//
-//     /* Inserta 3 valores */
-//     print_test("Prueba hash insertar clave1", hash_guardar(hash, claves[0], valores[0]));
-//     print_test("Prueba hash insertar clave2", hash_guardar(hash, claves[1], valores[1]));
-//     print_test("Prueba hash insertar clave3", hash_guardar(hash, claves[2], valores[2]));
-//
-//     // Prueba de iteración sobre las claves almacenadas.
-//     hash_iter_t* iter = hash_iter_crear(hash);
-//     const char *clave;
-//     ssize_t indice;
-//
-//     print_test("Prueba hash iterador esta al final, es false", !hash_iter_al_final(iter));
-//
-//     /* Primer valor */
-//     clave = hash_iter_ver_actual(iter);
-//     indice = buscar(clave, claves, sizeof(claves) / sizeof(char *));
-//     print_test("Prueba hash iterador ver actual, es una clave valida", indice != -1);
-//     print_test("Prueba hash iterador ver actual, no es el mismo puntero", clave != claves[indice]);
-//     print_test("Prueba hash iterador avanzar es true", hash_iter_avanzar(iter));
-//     print_test("Prueba hash iterador esta al final, es false", !hash_iter_al_final(iter));
-//
-//     /* Segundo valor */
-//     clave = hash_iter_ver_actual(iter);
-//     indice = buscar(clave, claves, sizeof(claves) / sizeof(char *));
-//     print_test("Prueba hash iterador ver actual, es una clave valida", indice != -1);
-//     print_test("Prueba hash iterador ver actual, no es el mismo puntero", clave != claves[indice]);
-//     print_test("Prueba hash iterador avanzar es true", hash_iter_avanzar(iter));
-//     print_test("Prueba hash iterador esta al final, es false", !hash_iter_al_final(iter));
-//
-//     /* Tercer valor */
-//     clave = hash_iter_ver_actual(iter);
-//     indice = buscar(clave, claves, sizeof(claves) / sizeof(char *));
-//     print_test("Prueba hash iterador ver actual, es una clave valida", indice != -1);
-//     print_test("Prueba hash iterador ver actual, no es el mismo puntero", clave != claves[indice]);
-//     /* Se anula esta prueba por diferencias de criterios */
-//     hash_iter_avanzar(iter);
-//     print_test("Prueba hash iterador esta al final, es true", hash_iter_al_final(iter));
-//
-//     /* Vuelve a tratar de avanzar, por las dudas */
-//     print_test("Prueba hash iterador ver actual, es NULL", !hash_iter_ver_actual(iter));
-//     print_test("Prueba hash iterador avanzar es false", !hash_iter_avanzar(iter));
-//     print_test("Prueba hash iterador esta al final, es true", hash_iter_al_final(iter));
-//
-//     hash_iter_destruir(iter);
-//     hash_destruir(hash);
-// }
-//
-// static void prueba_hash_iterar_volumen(size_t largo)
-// {
-//     hash_t* hash = hash_crear(NULL);
-//
-//     const size_t largo_clave = 10;
-//     char (*claves)[largo_clave] = malloc(largo * largo_clave);
-//
-//     size_t valores[largo];
-//
-//     /* Inserta 'largo' parejas en el hash */
-//     bool ok = true;
-//     for (unsigned i = 0; i < largo; i++) {
-//         sprintf(claves[i], "%08d", i);
-//         valores[i] = i;
-//         ok = hash_guardar(hash, claves[i], &valores[i]);
-//         if (!ok) break;
-//     }
-//
-//     // Prueba de iteración sobre las claves almacenadas.
-//     hash_iter_t* iter = hash_iter_crear(hash);
-//     print_test("Prueba hash iterador esta al final, es false", !hash_iter_al_final(iter));
-//
-//     ok = true;
-//     unsigned i;
-//     const char *clave;
-//     size_t *valor;
-//
-//     for (i = 0; i < largo; i++) {
-//         if ( hash_iter_al_final(iter) ) {
-//           printf("%s\n", "error en final");
-//             ok = false;
-//             break;
-//         }
-//         clave = hash_iter_ver_actual(iter);
-//         if ( clave == NULL ) {
-//           printf("%s\n", "error en ver actual");
-//             ok = false;
-//             break;
-//         }
-//         valor = hash_obtener(hash, clave);
-//         if ( valor == NULL ) {
-//           printf("%s\n", "error en obtener");
-//             ok = false;
-//             break;
-//         }
-//         *valor = largo;
-//         hash_iter_avanzar(iter);
-//     }
-//     print_test("Prueba hash iteración en volumen", ok);
-//     print_test("Prueba hash iteración en volumen, recorrio todo el largo", i == largo);
-//     print_test("Prueba hash iterador esta al final, es true", hash_iter_al_final(iter));
-//
-//     ok = true;
-//     for (i = 0; i < largo; i++) {
-//         if ( valores[i] != largo ) {
-//             ok = false;
-//             break;
-//         }
-//     }
-//     print_test("Prueba hash iteración en volumen, se cambiaron todo los elementos", ok);
-//
-//     free(claves);
-//     hash_iter_destruir(iter);
-//     hash_destruir(hash);
-// }
-//
-// /* ******************************************************************
-//  *                        FUNCIÓN PRINCIPAL
-//  * *****************************************************************/
+ssize_t buscar(const char* clave, char* claves[], size_t largo)
+{
+    for (size_t i = 0; i < largo; i++) {
+        if (strcmp(clave, claves[i]) == 0) return (ssize_t) i;
+    }
+    return -1;
+}
+
+void prueba_arbol_iterar()
+{
+    abb_t* arbol = abb_crear(strcmp, NULL);
+
+    char *claves[] = {"perro", "gato", "vaca"};
+    char *valores[] = {"guau", "miau", "mu"};
+
+    /* Inserta 3 valores */
+    print_test("Prueba arbol insertar clave1", abb_guardar(arbol, claves[0], valores[0]));
+    print_test("Prueba arbol insertar clave2", abb_guardar(arbol, claves[1], valores[1]));
+    print_test("Prueba arbol insertar clave3", abb_guardar(arbol, claves[2], valores[2]));
+
+    // Prueba de iteración sobre las claves almacenadas.
+    abb_iter_t* iter = abb_iter_in_crear(arbol);
+    const char *clave;
+    ssize_t indice;
+
+    print_test("Prueba arbol iterador esta al final, es false", !abb_iter_in_al_final(iter));
+
+    /* Primer valor */
+    clave = abb_iter_in_ver_actual(iter);
+    indice = buscar(clave, claves, sizeof(claves) / sizeof(char *));
+    print_test("Prueba arbol iterador ver actual, es una clave valida", indice != -1);
+    print_test("Prueba arbol iterador ver actual, no es el mismo puntero", clave != claves[indice]);
+    print_test("Prueba arbol iterador avanzar es true", abb_iter_in_avanzar(iter));
+    print_test("Prueba arbol iterador esta al final, es false", !abb_iter_in_al_final(iter));
+
+    /* Segundo valor */
+    clave = abb_iter_in_ver_actual(iter);
+    indice = buscar(clave, claves, sizeof(claves) / sizeof(char *));
+    print_test("Prueba arbol iterador ver actual, es una clave valida", indice != -1);
+    print_test("Prueba arbol iterador ver actual, no es el mismo puntero", clave != claves[indice]);
+    print_test("Prueba arbol iterador avanzar es true", abb_iter_in_avanzar(iter));
+    print_test("Prueba arbol iterador esta al final, es false", !abb_iter_in_al_final(iter));
+
+    /* Tercer valor */
+    clave = abb_iter_in_ver_actual(iter);
+    indice = buscar(clave, claves, sizeof(claves) / sizeof(char *));
+    print_test("Prueba arbol iterador ver actual, es una clave valida", indice != -1);
+    print_test("Prueba arbol iterador ver actual, no es el mismo puntero", clave != claves[indice]);
+    /* Se anula esta prueba por diferencias de criterios */
+    abb_iter_in_avanzar(iter);
+    print_test("Prueba arbol iterador esta al final, es true", abb_iter_in_al_final(iter));
+
+    /* Vuelve a tratar de avanzar, por las dudas */
+    print_test("Prueba arbol iterador ver actual, es NULL", !abb_iter_in_ver_actual(iter));
+    print_test("Prueba arbol iterador avanzar es false", !abb_iter_in_avanzar(iter));
+    print_test("Prueba arbol iterador esta al final, es true", abb_iter_in_al_final(iter));
+
+    abb_iter_in_destruir(iter);
+    abb_destruir(arbol);
+}
+
+void prueba_arbol_iterar_volumen(size_t largo)
+{
+
+    abb_t* arbol = abb_crear(strcmp, NULL);
+
+    const size_t largo_clave = 12;
+    char (*claves)[largo_clave] = malloc(largo * largo_clave);
+
+    size_t valores[largo];
+
+    bool ok = true;
+    for (unsigned i = 0; i < largo; i++) {
+        valores[i] = i;
+        int r = rand()%999999999;
+        sprintf(claves[i], "%08d", r);
+        ok = abb_guardar(arbol, claves[i], &valores[i]);
+        if (!ok) break;
+    }
+
+    // Prueba de iteración sobre las claves almacenadas.
+    abb_iter_t* iter = abb_iter_in_crear(arbol);
+    print_test("Prueba arbol iterador esta al final, es false", !abb_iter_in_al_final(iter));
+
+    ok = true;
+    unsigned i;
+    const char *clave;
+    size_t *valor;
+
+    for (i = 0; i < largo; i++) {
+        if ( abb_iter_in_al_final(iter) ) {
+          printf("%s\n", "error en final");
+            ok = false;
+            break;
+        }
+        clave = abb_iter_in_ver_actual(iter);
+        if ( clave == NULL ) {
+          printf("%s\n", "error en ver actual");
+            ok = false;
+            break;
+        }
+        valor = abb_obtener(arbol, clave);
+        if ( valor == NULL ) {
+          printf("%s\n", "error en obtener");
+            ok = false;
+            break;
+        }
+        *valor = largo;
+        abb_iter_in_avanzar(iter);
+    }
+    print_test("Prueba arbol iteración en volumen", ok);
+    print_test("Prueba arbol iteración en volumen, recorrio todo el largo", i == largo);
+    print_test("Prueba arbol iterador esta al final, es true", abb_iter_in_al_final(iter));
+
+    ok = true;
+    for (i = 0; i < largo; i++) {
+        if ( valores[i] != largo ) {
+            ok = false;
+            break;
+        }
+    }
+    print_test("Prueba arbol iteración en volumen, se cambiaron todo los elementos", ok);
+
+    free(claves);
+    abb_iter_in_destruir(iter);
+    abb_destruir(arbol);
+}
+
+/* ******************************************************************
+ *                        FUNCIÓN PRINCIPAL
+ * *****************************************************************/
 
 void test()
 {
@@ -440,14 +442,13 @@ void test()
 
 }
 
-void pruebas_arbol()
+void pruebas_abb_alumno()
 {
   printf("%s\n", "***************** PRUEBAS ARBOL *****************");
   // test();
-  // prueba_abb_volumen(5000, true);
   /* Ejecuta todas las pruebas unitarias. */
   prueba_crear_arbol_vacio();
-  // prueba_iterar_hash_vacio();
+  prueba_iterar_abb_vacio();
   prueba_arbol_insertar();
   prueba_arbol_reemplazar();
   prueba_arbol_reemplazar_con_destruir();
@@ -456,8 +457,8 @@ void pruebas_arbol()
   prueba_arbol_clave_vacia();
   prueba_arbol_valor_null();
   prueba_arbol_volumen(5000, true);
-  // prueba_hash_iterar();
-  // prueba_hash_iterar_volumen(5000);
+  prueba_arbol_iterar();
+  prueba_arbol_iterar_volumen(5000);
 }
 
 void pruebas_volumen_arbol(size_t largo)

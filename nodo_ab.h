@@ -93,6 +93,11 @@ bool nodo_ab_es_hoja(nodo_ab_t * nodo);
 // Se escribio en pos la posicion del hijo.
 bool nodo_ab_tiene_un_hijo(nodo_ab_t * nodo, pos_nodo* pos);
 
+// Devuelve verdadero si el nodo tiene dos hijos y falso en caso contrario.
+// Pre: el nodo fue creado.
+// Post: se devolvio verdadero o falso dependiendo si el nodo tiene dos hijos.
+bool nodo_ab_tiene_dos_hijos(nodo_ab_t * nodo);
+
 // Borra el nodo y devuele el dato almacenado en el mismo.
 // Pre: el nodo fue creado.
 // Post: se borro el nodo.

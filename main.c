@@ -6,7 +6,7 @@
  *                        PROGRAMA PRINCIPAL
  * *****************************************************************/
 
-void pruebas_arbol();
+void pruebas_abb_alumno();
 void pruebas_volumen_arbol(size_t);
 void pruebas_nodo();
 
@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     }
 
     pruebas_nodo();
-    pruebas_arbol();
+    pruebas_abb_alumno();
 
     return failure_count() > 0;
 }

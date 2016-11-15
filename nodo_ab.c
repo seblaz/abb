@@ -104,6 +104,10 @@ bool nodo_ab_tiene_un_hijo(nodo_ab_t * nodo, pos_nodo* pos){
   return !(nodo->izq && nodo->der) && !nodo_ab_es_hoja(nodo);
 }
 
+bool nodo_ab_tiene_dos_hijos(nodo_ab_t * nodo){
+  return nodo->izq && nodo->der;
+}
+
 void* nodo_ab_borrar(nodo_ab_t * nodo){
   void* dato  = nodo->valor;
   free(nodo->clave);
